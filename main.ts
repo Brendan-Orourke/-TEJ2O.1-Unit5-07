@@ -16,7 +16,7 @@ input.onButtonPressed(Button.A, function () {
     robotbit.Servo(servoNumber1, 0)
     basic.clearScreen()
     basic.showString('0')
-    basic.showIcon(IconNames.Square)
+    basic.showIcon(IconNames.SmallSquare)
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
 })

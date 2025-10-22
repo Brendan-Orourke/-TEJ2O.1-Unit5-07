@@ -1,8 +1,31 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Brendan O'Rourke
+ * Created on: Sep 2025
+ * This program controls a servo
 */
 
-basic.showString('Hello, World!')
+//variables
+const servoNumber1 = robotbit.Servos.S1
+
+// setup
+basic.showIcon(IconNames.Happy)
+
+input.onButtonPressed(Button.A, function () {
+    // move servo to 0 degrees 
+    robotbit.Servo(servoNumber1, 0)
+    basic.clearScreen()
+    basic.showString('0')
+    basic.showIcon(IconNames.Square)
+    basic.clearScreen()
+    basic.showIcon(IconNames.Happy)
+})
+
+input.onButtonPressed(Button.B, function () {
+    robotbit.Servo(servoNumber1, 180)
+    basic.clearScreen()
+    basic.showString('180')
+    basic.showIcon(IconNames.SmallSquare)
+    basic.clearScreen()
+    basic.showIcon(IconNames.Happy)
+})
